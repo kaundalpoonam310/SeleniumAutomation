@@ -12,9 +12,11 @@ import com.peoplehumtest.base.TestBase;
 
 public class LeaveCategoryTest extends TestBase {
     private LeavePolicyPage leavePolicyPage;
+    private long testStartTime;
 
     @BeforeMethod
     public void setUpPage() {
+        testStartTime = System.currentTimeMillis();
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login(ConfigReader.getUsername(), ConfigReader.getPassword());
         leavePolicyPage = new LeavePolicyPage(driver);
@@ -25,9 +27,9 @@ public class LeaveCategoryTest extends TestBase {
         leavePolicyPage.clickProfileDropdown();
         leavePolicyPage.navigateToLeaveCategory();
         LeaveCategoryData data = new LeaveCategoryData(
-                "SickCategory10",
-                "SickCategory10",
-                "SickCategory10 description",
+                "SickCategory20",
+                "SickCategory20",
+                "SickCategory20 description",
                 "/Users/poonamkaundal/Documents/PeoplehumProjects/PeopleHumProjects/seleniumuiautomation/app/src/test/resources/Flag_of_the_Philippines.png",
                 true
         );
@@ -45,6 +47,9 @@ public class LeaveCategoryTest extends TestBase {
     
     @AfterMethod
     public void tearDown() {
+        long testEndTime = System.currentTimeMillis();
+        long duration = testEndTime - testStartTime;
+        System.out.println("Test execution time: " + duration + " ms");
         // Use BasePage's closeBrowser method to close the browser after each test
         if (leavePolicyPage != null) {
             leavePolicyPage.closeBrowser();

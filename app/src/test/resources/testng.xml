@@ -6,7 +6,8 @@
         <classes>
             <!-- <class name="com.peoplehumtest.tests.QuizTest"/> -->
             <!-- <class name="com.peoplehumtest.tests.RegisteredEntityTest"/> -->
-            <class name="com.peoplehumtest.tests.LeaveCategoryTest"/>
+            <!-- <class name="com.peoplehumtest.tests.LeaveCategoryTest"/> -->
+            <class name="com.peoplehumtest.tests.LeavePolicyTest"/>
         </classes>
     </test>
 </suite>

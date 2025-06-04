@@ -23,7 +23,7 @@ public class LoginPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    public void login(String email, String password) {
+public void login(String email, String password) {
         // Wait for login form to be present and fill in credentials
         waitForElementToBeVisible(emailInput);
         sendKeys(emailInput, email);

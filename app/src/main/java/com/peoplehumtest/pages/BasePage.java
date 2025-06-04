@@ -18,7 +18,7 @@ public class BasePage {
         this.driver = driver;
         // Set implicit wait globally for all pages
         this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(60));
         this.actions = new Actions(driver);
     }
 
